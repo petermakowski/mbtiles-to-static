@@ -1,0 +1,15 @@
+{
+  "name": "mbtiles-to-static",
+  "version": "1.0.0",
+  "description": "A solution to generate static .pbf tiles from an MBTiles file and serves them using BrowserSync.",
+  "main": "mbtiles-to-static.js",
+  "scripts": {
+    "convert": "node mbtiles-to-static.js",
+    "serve": "browser-sync start -s static_tiles -f --cors --no-notify --port 8080 --middleware middleware.js"
+  },
+  "devDependencies": {
+    "@mapbox/mbtiles": "0.12.1",
+    "browser-sync": "2.29.3",
+    "zlib": "1.0.5"
+  }
+}
